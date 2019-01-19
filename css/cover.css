@@ -1,0 +1,24 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  background-color: #0009;
+}
+
+

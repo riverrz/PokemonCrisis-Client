@@ -1,0 +1,163 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>PokemonCrisis | Home</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/active-pokemon.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header>
+        <div class="logo-big">PokemonCrisis</div>
+      </header>
+
+      <main role="main" class="inner cover">
+
+        <div class="container">
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#home">Lobby</a></li>
+          <li><a data-toggle="tab" href="#menu1"><i class="fas fa-plus"></i></a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div id="home" class="tab-pane fade in active">
+            <h3>Lobby</h3>
+            <p>World Chat</p>
+          </div>
+          <div id="menu1" class="tab-pane fade">
+            <h3>Room Lists</h3>
+            <p>Room1</p>
+            <p>Room2</p>
+          </div>
+        </div>
+      </div>
+
+        <div id="mySidenavmenu" class="sidenav menu-position">
+          <a href="#" id="teams">Teams&nbsp; &nbsp;<i class="fab fa-teamspeak"></i></a>
+          <a href="#" id="pokemons">Pokes &nbsp; &nbsp; <img src="img/pokeicon2.png" style="width:30px;" /></a>
+          <a href="#" id="shop">Shop &nbsp;&nbsp; &nbsp; <i class="fas fa-store"></i></a>
+          <a href="#" id="forum">Forum &nbsp;&nbsp;<i class="fas fa-comments"></i></a>
+          <a href="#" id="rules">Rules &nbsp;&nbsp;&nbsp;<i class="fas fa-sticky-note"></i></a>
+
+        </div>
+
+        <div class="center">
+        <img class="home-model" src="img/model1.png"> 
+        <div class="popup pokeball-1">
+        <img src="img/pokeball.png" style="width:10em;" class="popup" onclick="mypoke1()"/>
+          <span class="popuptext" id="active-poke1"/>
+          <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" />
+          <p>Charizard</p>
+          <p>Type: <a style="margin: 1px 0;" class="type-icon type-fire" href="/type/fire">Fire</a><a style="margin: 1px 0;" class="type-icon type-flying" href="/type/flying">Flying</a></p>
+          <p>Species:  Flame Pokémon</p>
+          <p>Abilities: 1. Blaze<br>
+                        2. Solar Power (hidden ability)
+          </p>
+          
+          </span>
+        </div>
+        <div class="popup pokeball-2">
+        <img src="img/pokeball.png" style="width:10em;" class="popup" onclick="mypoke2()"/>
+          <span class="popuptext" id="active-poke2"/>
+          <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/venusaur.gif" />
+          <p>Charizard</p>
+          <p>Type: <a style="margin: 1px 0;" class="type-icon type-fire" href="/type/fire">Fire</a><a style="margin: 1px 0;" class="type-icon type-flying" href="/type/flying">Flying</a></p>
+          <p>Species:  Flame Pokémon</p>
+          <p>Abilities: 1. Blaze<br>
+                        2. Solar Power (hidden ability)
+          </p>
+          
+          </span>
+        </div>
+        <div class="popup pokeball-3">
+        <img src="img/pokeball.png" style="width:10em;" class="popup" onclick="mypoke3()"/>
+          <span class="popuptext" id="active-poke3"/>
+          <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif" />
+          <p>Pikachu</p>
+          <p>Type: <a style="margin: 1px 0;" class="type-icon type-fire" href="/type/fire">Fire</a><a style="margin: 1px 0;" class="type-icon type-flying" href="/type/flying">Flying</a></p>
+          <p>Species:  Flame Pokémon</p>
+          <p>Abilities: 1. Blaze<br>
+                        2. Solar Power (hidden ability)
+          </p>
+          
+          </span>
+        </div>
+        <div class="popup pokeball-4">
+        <img src="img/pokeball.png" style="width:10em;" class="popup" onclick="mypoke4()"/>
+          <span class="popuptext" id="active-poke4"/>
+          <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" />
+          <p>Charizard</p>
+          <p>Type: <a style="margin: 1px 0;" class="type-icon type-fire" href="/type/fire">Fire</a><a style="margin: 1px 0;" class="type-icon type-flying" href="/type/flying">Flying</a></p>
+          <p>Species:  Flame Pokémon</p>
+          <p>Abilities: 1. Blaze<br>
+                        2. Solar Power (hidden ability)
+          </p>
+          
+          </span>
+        </div>
+        <div class="popup pokeball-5">
+        <img src="img/pokeball.png" style="width:10em;" class="popup" onclick="mypoke5()"/>
+          <span class="popuptext" id="active-poke5"/>
+          <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" />
+          <p>Charizard</p>
+          <p>Type: <a style="margin: 1px 0;" class="type-icon type-fire" href="/type/fire">Fire</a><a style="margin: 1px 0;" class="type-icon type-flying" href="/type/flying">Flying</a></p>
+          <p>Species:  Flame Pokémon</p>
+          <p>Abilities: 1. Blaze<br>
+                        2. Solar Power (hidden ability)
+          </p>
+          
+          </span>
+        </div>
+        <div class="popup pokeball-6">
+        <img src="img/pokeball.png" style="width:10em;" class="popup" onclick="mypoke6()"/>
+          <span class="popuptext" id="active-poke6"/>
+          <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" />
+          <p>Charizard</p>
+          <p>Type: <a style="margin: 1px 0;" class="type-icon type-fire" href="/type/fire">Fire</a><a style="margin: 1px 0;" class="type-icon type-flying" href="/type/flying">Flying</a></p>
+          <p>Species:  Flame Pokémon</p>
+          <p>Abilities: 1. Blaze<br>
+                        2. Solar Power (hidden ability)
+          </p>
+          
+          </span>
+        </div>
+        <button class="challenge-button">Find a Challenge</button>
+        <button class="profile-button">Profile</button>
+      </div>
+
+      </main>
+
+      <footer >
+        <p>PokemonCrisis</p>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/active-pokemon.js"></script>
+  </body>
+</html>
