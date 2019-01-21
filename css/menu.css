@@ -1,4 +1,4 @@
-#mySidenavmenu a {
+#leftSidenavmenu a {
   position: absolute;
   left: -90px;
   transition: 0.3s;
@@ -10,8 +10,24 @@
   border-radius: 0 15px 15px 0;
 }
 
-#mySidenavmenu a:hover {
+#rightSidenavmenu a {
+  position: absolute;
+  right: -137px;
+  transition: 0.3s;
+  padding: 9px;
+  width: 180px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+  border-radius: 15px 0px 0px 15px;
+}
+
+#leftSidenavmenu a:hover {
   left: 0;
+}
+
+#rightSidenavmenu a:hover {
+  right: 0;
 }
 
 #teams {
@@ -25,16 +41,21 @@
 }
 
 #shop {
-  top: 380px;
+  top: 390px;
   background-color: #000;
 }
 
 #forum {
-  top: 440px;
+  top: 450px;
   background-color: #000;
 }
 #rules {
-  top:500px;
+  top:510px;
+  background-color: #000;
+}
+
+#lobbychat {
+  top:320px;
   background-color: #000;
 }
 
