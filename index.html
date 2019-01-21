@@ -11,7 +11,6 @@
     <title>PokemonCrisis | Home</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
@@ -20,6 +19,12 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/active-pokemon.css" rel="stylesheet">
     <link href="css/menu.css" rel="stylesheet">
+    <script type="text/javascript" src="./tabs_style/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="./tabs_style/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="./tabs_style/jquery-ui.css">
+
+    <link rel="stylesheet" type="text/css" href="./tabs_style/result-light.css">
+    <script type="text/javascript" src="js/tabs.js"></script>
   </head>
 
   <body class="text-center">
@@ -31,24 +36,12 @@
 
       <main role="main" class="inner cover">
 
-        <div class="container">
-        <ul class="nav nav-tabs">
-          <li class="active"><a data-toggle="tab" href="#home">Lobby</a></li>
-          <li><a data-toggle="tab" href="#menu1"><i class="fas fa-plus"></i></a></li>
-        </ul>
+        <!--tabs-->
+        <div id="container-1" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+        <ul class="ui-tabs-nav " role="tablist">
 
-        <div class="tab-content">
-          <div id="home" class="tab-pane fade in active">
-            <h3>Lobby</h3>
-            <p>World Chat</p>
+        </ul>
           </div>
-          <div id="menu1" class="tab-pane fade">
-            <h3>Room Lists</h3>
-            <p>Room1</p>
-            <p>Room2</p>
-          </div>
-        </div>
-      </div>
 
         <div id="leftSidenavmenu" class="sidenav menu-position">
           <a href="#" id="teams">Teams&nbsp; &nbsp;<i class="fab fa-teamspeak"></i></a>
@@ -59,7 +52,7 @@
         </div>
 
         <div id="rightSidenavmenu">
-            <a href="#" id="lobbychat"><i class="fas fa-comment-dots"></i>&nbsp;&nbsp; Join Lobby Chat</i></a>
+            <button href="#" id="lobby_chat" class="lobbychat"><i class="fas fa-comment-dots"></i>&nbsp;&nbsp; Join Lobby Chat</i></button>
         </div>
 
         <div class="center">
@@ -152,15 +145,16 @@
         <p>PokemonCrisis</p>
       </footer>
     </div>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script>
+      if (window.parent && window.parent.parent){
+        window.parent.parent.postMessage(["resultsFrame", {
+          height: document.body.getBoundingClientRect().height,
+          slug: "a4y51w3m"
+        }], "*")
+      }
+    </script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/active-pokemon.js"></script>
+
   </body>
 </html>

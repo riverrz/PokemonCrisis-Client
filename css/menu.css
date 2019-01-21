@@ -10,7 +10,7 @@
   border-radius: 0 15px 15px 0;
 }
 
-#rightSidenavmenu a {
+#rightSidenavmenu button{
   position: absolute;
   right: -137px;
   transition: 0.3s;
@@ -26,7 +26,7 @@
   left: 0;
 }
 
-#rightSidenavmenu a:hover {
+#rightSidenavmenu button:hover {
   right: 0;
 }
 
@@ -54,9 +54,10 @@
   background-color: #000;
 }
 
-#lobbychat {
-  top:320px;
-  background-color: #000;
+.lobbychat {
+  top:320px !important;
+  background-color: #000 !important;
+  border-color: #000 !important;
 }
 
 
