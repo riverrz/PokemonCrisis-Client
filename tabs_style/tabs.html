@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://fiddle.jshell.net/AakashRajput/a4y51w3m/show/light/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title></title>
+
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script type="text/javascript" src="./jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="./jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="./jquery-ui.css">
+
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+
+  </style>
+
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">
+
+
+    $(window).load(function(){
+
+$(document).ready(function() {
+    var tabs = $("#container-1").tabs();
+    var tabCounter = 1;
+
+    $('#add_tab').click( function(){
+        var ul = tabs.find( "ul" );
+        var current_idx = ul.find("li").length + 1;
+        $("<li><a href='#fragment-" + current_idx + "'>Call Details</a></li>" ).appendTo( ul );
+        tabs.append("<div id='fragment-" + current_idx + "'>new tab " + current_idx + "</div>");
+        tabs.tabs("refresh");
+        tabs.tabs("select", 1);
+    });
+});
+
+    });
+
+</script>
+
+</head>
+<body>
+    <div id="container-1" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+    <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+        <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="fragment-1" aria-labelledby="ui-id-1" aria-selected="true"><a href="" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-1">List</a></li>
+        <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="fragment-2" aria-labelledby="ui-id-2" aria-selected="false"><a href="" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-2">List</a></li>
+        <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="fragment-3" aria-labelledby="ui-id-3" aria-selected="false"><a href="" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-3">List</a></li>
+    </ul>
+    <div id="fragment-1" aria-labelledby="ui-id-1" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="true" aria-hidden="false">one</div>
+    <div id="fragment-2" aria-labelledby="ui-id-2" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">two</div>
+    <div id="fragment-3" aria-labelledby="ui-id-3" class="ui-tabs-panel ui-widget-content ui-corner-bottom" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;">three</div>
+</div>
+<button id="add_tab">Add Tab</button>
+
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "a4y51w3m"
+      }], "*")
+    }
+  </script>
+
+
+</body></html>

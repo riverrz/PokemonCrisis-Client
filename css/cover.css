@@ -18,7 +18,5 @@ a:hover {
 
 html,
 body {
-  background-color: #0009;
+  background-color: #0009 !important;
 }
-
-
