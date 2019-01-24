@@ -10,24 +10,24 @@
   border-radius: 0 15px 15px 0;
 }
 
-#rightSidenavmenu button{
-  position: absolute;
-  right: -137px;
-  transition: 0.3s;
-  padding: 9px;
-  width: 180px;
-  text-decoration: none;
-  font-size: 1.2em;
-  color: white;
-  border-radius: 15px 0px 0px 15px;
+#rightSidenavmenu a{
+  position: absolute !important;
+  right: -137px !important;
+  transition: 0.3s !important;
+  padding: 9px !important;
+  width: 180px !important;
+  text-decoration: none !important;
+  font-size: 1.2em !important;
+  color: white !important;
+  border-radius: 15px 0px 0px 15px !important;
 }
 
 #leftSidenavmenu a:hover {
   left: 0;
 }
 
-#rightSidenavmenu button:hover {
-  right: 0;
+#rightSidenavmenu a:hover {
+  right: 0 !important;
 }
 
 #teams {

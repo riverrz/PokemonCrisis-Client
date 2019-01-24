@@ -1,48 +1,51 @@
 
+
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="icon" href="">
 
     <title>PokemonCrisis | Home</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
+    <script type="text/javascript" src="js/jquery-1.4.min.js" ></script>
+    <link rel="stylesheet" href="css/tabs.css">
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
+    <script src="https://use.typekit.net/hoy3lrg.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'><link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="css/chatroom.css">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/active-pokemon.css" rel="stylesheet">
     <link href="css/menu.css" rel="stylesheet">
-    <script type="text/javascript" src="./tabs_style/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="./tabs_style/jquery-ui.js"></script>
-    <link rel="stylesheet" type="text/css" href="./tabs_style/jquery-ui.css">
-
-    <link rel="stylesheet" type="text/css" href="./tabs_style/result-light.css">
     <script type="text/javascript" src="js/tabs.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
   </head>
 
-  <body class="text-center">
+  <body class="text-center" >
 
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
       <header>
-        <div><img class="logo-big" src="img/crisis_logo_big.png" alt="PokemonCrisis"></div>
-        <div><button name="login" href="#" class="login">Choose name</button></div>
+        <div id="header" class="header"><img class="logo" src="img/crisis_logo_big.png" srcset="https://play.pokemonshowdown.com/pokemonshowdownbeta@2x.png 2x" alt="Pokémon Showdown! (beta)" width="146" height="44"><div class="maintabbarbottom"></div>
+        <div class="tabbar maintabbar"><div class="inner">
+        </div>
+      </div>
+      <div class="userbar">
+         <button name="login" onclick="userLogin()">Choose name</button>
+         <button class="icon button" name="openSounds" title="Sound" aria-label="Sound"><i class="fa fa-volume-off"></i></button>
+         <button class="icon button" name="openOptions" title="Options" aria-label="Options">
+              <i class="fa fa-cog"></i></button>
+      </div>
+      </div>
       </header>
-
-      <main role="main" class="inner cover">
-
-        <!--tabs-->
-        <div id="container-1" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
-        <ul class="ui-tabs-nav " role="tablist">
-
-        </ul>
-          </div>
 
         <div id="leftSidenavmenu" class="sidenav menu-position">
           <a href="#" id="teams">Teams&nbsp; &nbsp;<i class="fab fa-teamspeak"></i></a>
@@ -52,11 +55,11 @@
           <a href="#" id="rules">Rules &nbsp;&nbsp;&nbsp;<i class="fas fa-sticky-note"></i></a>
         </div>
 
-        <div id="rightSidenavmenu">
-            <button href="#" id="lobby_chat" class="lobbychat"><i class="fas fa-comment-dots"></i>&nbsp;&nbsp; Join Lobby Chat</i></button>
-        </div>
+        <!--div  id="rightSidenavmenu">
+            <a href="#" rel="Lobby" title="Lobby" value="Lobby" class="lobbychat"><i class="fas fa-comment-dots"></i>&nbsp;&nbsp; Join Lobby Chat</i></a>
+        </div-->
 
-        <div class="center">
+      <!--div class="center">
         <img class="home-model" src="img/model1.png">
         <div class="popup pokeball-1">
         <img src="img/pokeball.png" style="width:10em;" class="popup" onclick="mypoke1()"/>
@@ -138,23 +141,133 @@
         </div>
         <button class="challenge-button">Find a Challenge</button>
         <button class="profile-button">Profile</button>
+      </div-->
+      <!-- LOBBY CHAT -->
+      <div id="frame">
+      	<div id="sidepanel">
+      		<!--div id="profile">
+      			<div class="wrap">
+      				<img id="profile-img" src="http://emilcarlsson.se/assets/mikeross.png" class="online" alt="" />
+      				<p>Mike Ross</p>
+      				<i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+      				<div id="status-options">
+      					<ul>
+      						<li id="status-online" class="active"><span class="status-circle"></span> <p>Online</p></li>
+      						<li id="status-away"><span class="status-circle"></span> <p>Away</p></li>
+      						<li id="status-busy"><span class="status-circle"></span> <p>Busy</p></li>
+      						<li id="status-offline"><span class="status-circle"></span> <p>Offline</p></li>
+      					</ul>
+      				</div>
+      				<div id="expanded">
+      					<label for="twitter"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></label>
+      					<input name="twitter" type="text" value="mikeross" />
+      					<label for="twitter"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></label>
+      					<input name="twitter" type="text" value="ross81" />
+      					<label for="twitter"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i></label>
+      					<input name="twitter" type="text" value="mike.ross" />
+      				</div>
+      			</div>
+      		</div-->
+      		<div id="search">
+      			<label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
+      			<input type="text" placeholder="Search User..." />
+      		</div>
+      		<div id="contacts">
+      			<ul>
+      				<li class="contact">
+      					<div class="wrap">
+      						<span class="contact-status online"></span>
+      						<img src="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif" alt="" />
+      						<div class="meta">
+      							<p class="name">Shivam</p>
+      							<p class="preview">You just got LITT up, Shivay.</p>
+      						</div>
+      					</div>
+      				</li>
+      				<li class="contact active">
+      					<div class="wrap">
+      						<span class="contact-status busy"></span>
+      						<img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" alt="" />
+      						<div class="meta">
+      							<p class="name">Aakash</p>
+      							<p class="preview">Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+      						</div>
+      					</div>
+      				</li>
+      				<li class="contact">
+      					<div class="wrap">
+      						<span class="contact-status away"></span>
+      						<img src="https://img.pokemondb.net/sprites/black-white/anim/normal/blastoise.gif" alt="" />
+      						<div class="meta">
+      							<p class="name">Shivay</p>
+      							<p class="preview">I was thinking that we could have sex tonight, sounds good?</p>
+      						</div>
+      					</div>
+      				</li>
+      			</ul>
+      		</div>
+      		<!--div id="bottom-bar">
+      			<button id="addcontact"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>Add contact</span></button>
+      			<button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span></button>
+      		</div-->
+      	</div>
+      	<div class="content">
+      		<div class="contact-profile">
+      			<img src="img/logo_lobby.png" alt="" />
+      			<p>Lobby</p>
+      			<div class="social-media">
+      			</div>
+      		</div>
+      		<div class="messages">
+      			<ul>
+      				<li class="sent">
+      					<img src="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif" alt="" />
+      					<p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!</p>
+      				</li>
+      				<li class="replies">
+      					<img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" alt="" />
+      					<p>When you're backed against the wall, break the god damn thing down.</p>
+      				</li>
+      				<li class="replies">
+      					<img src="https://img.pokemondb.net/sprites/black-white/anim/normal/blastoise.gif" alt="" />
+      					<p>Excuses don't win championships.</p>
+      				</li>
+      				<li class="sent">
+      					<img src="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif" alt="" />
+      					<p>Oh yeah, did Michael Jordan tell you that?</p>
+      				</li>
+      				<li class="replies">
+      					<img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" alt="" />
+      					<p>No, I told him that.</p>
+      				</li>
+      				<li class="replies">
+      					<img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" alt="" />
+      					<p>What are your choices when someone puts a gun to your head?</p>
+      				</li>
+      				<li class="sent">
+      					<img src="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif" alt="" />
+      					<p>What are you talking about? You do what they say or they shoot you.</p>
+      				</li>
+      				<li class="replies">
+      					<img src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" alt="" />
+      					<p>Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+      				</li>
+      			</ul>
+      		</div>
+      		<div class="message-input">
+      			<div class="wrap">
+      			<input type="text" placeholder="Write your message..." />
+      			<i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+      			<button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+      			</div>
+      		</div>
+      	</div>
       </div>
-
-      </main>
-
-      <footer >
-        <p>PokemonCrisis</p>
-      </footer>
+      <!-- Lobby Chat End -->
     </div>
-    <script>
-      if (window.parent && window.parent.parent){
-        window.parent.parent.postMessage(["resultsFrame", {
-          height: document.body.getBoundingClientRect().height,
-          slug: "a4y51w3m"
-        }], "*")
-      }
-    </script>
+    <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/chatroom.js"></script>
     <script src="js/active-pokemon.js"></script>
 
   </body>
