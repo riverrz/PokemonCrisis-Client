@@ -1,6 +1,5 @@
-* {
-  box-sizing: border-box;
-}
+
+
 
 
 .logo-big {
@@ -80,13 +79,7 @@
     font-weight: 700;
 }
 
-footer {
-  z-index:3;
-  background-color: #000;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
+
 
 .center {
 	margin-top:250px;
